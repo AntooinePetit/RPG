@@ -94,6 +94,8 @@ class GenerateurEnnemi:
 
     def niveauEnnemi(self):
         self.niveau = random.randint(joueur.niveau - 4, joueur.niveau + 2)
+        if self.niveau <= 0:
+            self.niveau = 1
     
     def hpEnnemi(self):
         if self.classe == "Archer":
